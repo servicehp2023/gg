@@ -1,1 +1,358 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GANES GSM</title>
+    <link rel="icon" href="assets/img/logo.png">
+    <!-- Tambahkan link CSS AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Tambahkan link CSS dari Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Prism:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap">
+
+
+    <style>
+        
+        /* Tambahkan CSS untuk menu pada layar yang lebih kecil */
+        #menu.mobile {
+    display: none;
+    position: absolute;
+    top: 60px; /* Sesuaikan dengan tinggi header */
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #8042f3, #9468e6);
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+    
+        #menu.mobile.active {
+            display: flex;
+        }
+
+        /* Tambahkan CSS untuk memberikan margin dan padding */
+        .my-4 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        /* Ganti warna latar belakang gelap */
+    .dark {
+        background-color: #8042f3;
+        color: #fff;
+    }
+    h1 {
+        font-family: 'Rampart One', cursive;
+}
+/* Gaya untuk elemen h2 dengan kelas "custom-heading" */
+h2.custom-heading {
+    font-family: 'Skranji', cursive;
+    /* Gaya lain yang Anda inginkan untuk elemen h2 ini */
+}
+
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Misalnya, Anda ingin semua ikon dengan kelas "icon" membesar saat di-hover */
+.icon:hover {
+    transform: scale(1.1); /* Ubah faktor skala sesuai dengan preferensi Anda */
+    transition: transform 0.2s ease; /* Efek transisi agar perubahan terjadi lebih halus */
+}
+
+    </style>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f00d1766-6305-4328-a5a8-27d52d6637ed";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+<body class="dark">
+    <!-- Header -->
+    <header class="bg-purpel p-4 relative">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h2 class="custom-heading text-white text-2xl font-semibold">GANES GSM</h1>
+            <!-- Tambahkan kelas 'lg:hidden' untuk menyembunyikan menu pada layar yang lebih kecil -->
+            <div class="lg:hidden">
+                <!-- Tombol burger menu -->
+                <button id="menu-toggle" class="text-white p-2 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <!-- Menu pada layar yang lebih kecil -->
+                <ul id="menu" class="mobile icon">
+                    <li><a href="#beranda" class="text-white hover:underline">Beranda</a></li>
+                    <li><a href="#layanan" class="text-white hover:underline">Layanan</a></li>
+                    <li><a href="#tentang-kami" class="text-white hover:underline">Tentang Kami</a></li>
+                    <li><a href="#kontak" class="text-white hover:underline">Kontak</a></li>
+                </ul>
+            </div>
+            <!-- Tambahkan kelas 'lg:flex' untuk menampilkan menu pada layar yang lebih besar -->
+            <ul class="hidden lg:flex space-x-4">
+                <li><a href="#beranda" class="text-white hover:underline ">Beranda</a></li>
+                <li><a href="#layanan" class="text-white hover:underline">Layanan</a></li>
+                <li><a href="#tentang-kami" class="text-white hover:underline">Tentang Kami</a></li>
+                <li><a href="#kontak" class="text-white hover:underline">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten -->
+
+<!-- Jumbotron -->
+
+<section id="beranda" class="relative">
+    <div class="relative rounded-none overflow-hidden">
+        <img src="assets/img/jum.jpg" alt="Background" class="w-full h-auto object-cover object-center opacity-90 rounded-none">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 flex items-center">
+            <div class="container mx-auto relative z-10 text-white text-center">
+                <h1 class="text-6xl font-semibold mb-4">Ganes Gsm</h1>
+                <p class="text-lg mb-8">Service HP Berkualitas dari GANES GSM, Pelayanan Terbaik untuk Perangkat Mobile Anda</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="text-white hover:text-blue-200 transition duration-300 icon">
+                        <i class="fab fa-facebook h-6 w-6"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-200 transition duration-300 icon">
+                        <i class="fab fa-twitter h-6 w-6"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-200 transition duration-300 icon">
+                        <i class="fab fa-instagram h-6 w-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container mx-auto p-4">
+
+<!-- Layanan -->
+<section id="layanan" class="py-8 my-4" data-aos="fade-up">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold mb-4">Layanan Kami</h2>
+        <!-- Card Layanan -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up">
+            <div class="bg-white p-4 rounded-lg shadow-md text-dark icon"> <!-- Menambahkan class "text-dark" -->
+                <h3 class="text-xl font-semibold mb-2 text-gray-700">Aktivasi Tools</h3> <!-- Menggunakan warna text-gray-700 -->
+                <p class="text-gray-600">Kami Menyediakan Layanan Aktivasi Alat dan Perangkat untuk Memenuhi Kebutuhan Anda. Aktifkan dan Atur Alat Anda dengan Mudah bersama Kami!</p> <!-- Menggunakan warna text-gray-600 -->
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md text-dark icon"> <!-- Menambahkan class "text-dark" -->
+                <h3 class="text-xl font-semibold mb-2 text-gray-700">Auth Token Decrypt</h3> <!-- Menggunakan warna text-gray-700 -->
+                <p class="text-gray-600">Kami Menyediakan Layanan Auth Token Decrypt untuk Memastikan Keamanan dan Akses yang Aman dalam Penggunaan Aplikasi Anda</p> <!-- Menggunakan warna text-gray-600 -->
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md text-dark icon"> <!-- Menambahkan class "text-dark" -->
+                <h3 class="text-xl font-semibold mb-2 text-gray-700">Perbaikan Software</h3> <!-- Menggunakan warna text-gray-700 -->
+                <p class="text-gray-600">Mengatasi masalah perangkat lunak dan pembaruan sistem.</p> <!-- Menggunakan warna text-gray-600 -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+        <!-- Tentang Kami -->
+        <section id="tentang-kami" class="py-8 my-4" data-aos="fade-up">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-semibold mb-4">Tentang Kami</h2>
+                <p>Kami adalah tim profesional yang berdedikasi untuk memperbaiki dan merawat perangkat mobile Anda.</p>
+            </div>
+        </section>
+
+<!-- Kontak -->
+<section id="kontak" class="py-8 my-4" data-aos="fade-up">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold mb-4">Kontak Kami</h2>
+        <p>Jika Anda memiliki pertanyaan atau perlu bantuan, jangan ragu untuk menghubungi kami.</p>
+        
+        <!-- Card Kontak -->
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">Email</h3>
+                <a href="mailto:info@servicehp.com" class="text-blue-500 hover:underline icon">info@servicehp.com</a>
+            </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">Telepon</h3>
+                <a href="tel:(123) 456-7890" class="text-blue-500 hover:underline icon">(123) 456-7890</a>
+            </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">Facebook</h3>
+                <a href="https://www.facebook.com/GANES.SERVICE.ONLINE" class="text-blue-500 hover:underline icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">Telegram</h3>
+                <a href="https://t.me/technician_sharing" class="text-blue-500 hover:underline icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+        </div>
+        
+
+        <!-- Card Nomor Rekening -->
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">BCA</h3>
+                <div class="text-gray-600">
+                    <button id="bca-button" class="text-blue-500 hover:underline cursor-pointer icon">
+                        <i class="far fa-eye"></i>
+                    </button>
+                    <span id="bca-number" class="hidden">0561858950 (NASRUDIN)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">Mandiri</h3>
+                <div class="text-gray-600">
+                    <button id="mandiri-button" class="text-blue-500 hover:underline cursor-pointer icon">
+                        <i class="far fa-eye"></i>
+                    </button>
+                    <span id="mandiri-number" class="hidden">1610006119114 (NASRUDIN)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Nomor Rekening lainnya -->
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">SEA-BANK</h3>
+                <div class="text-gray-600">
+                    <button id="sea-bank-button" class="text-blue-500 hover:underline cursor-pointer icon">
+                        <i class="far fa-eye"></i>
+                    </button>
+                    <span id="sea-bank-number" class="hidden">901999621540 (NASRUDIN)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">DANA</h3>
+                <div class="text-gray-600">
+                    <button id="dana-1-button" class="text-blue-500 hover:underline cursor-pointer icon">
+                        <i class="far fa-eye"></i>
+                    </button>
+                    <span id="dana-1-number" class="hidden">08992184324 (Masxxxx)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-700">DANA</h3>
+                <div class="text-gray-600">
+                    <button id="dana-2-button" class="text-blue-500 hover:underline cursor-pointer icon">
+                        <i class="far fa-eye"></i>
+                    </button>
+                    <span id="dana-2-number" class="hidden">087862020222 (ALxxx Mxxx)</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    // Fungsi untuk menampilkan nomor rekening saat tombol "Lihat" diklik
+    function showNumber(buttonId, numberId) {
+        const button = document.getElementById(buttonId);
+        const number = document.getElementById(numberId);
+
+        button.addEventListener('click', () => {
+            button.style.display = 'none';
+            number.style.display = 'inline';
+        });
+    }
+
+    // Panggil fungsi showNumber untuk setiap nomor rekening
+    showNumber('bca-button', 'bca-number');
+    showNumber('mandiri-button', 'mandiri-number');
+    showNumber('sea-bank-button', 'sea-bank-number');
+    showNumber('dana-1-button', 'dana-1-number');
+    showNumber('dana-2-button', 'dana-2-number');
+</script>
+
+
+
+        
+    </div>
+    <br><br><br>
+    <div class="container mx-auto p-4" data-aos="fade-up">
+        
+        <div id="disqus_thread" ></div>
+    </div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-ganesgsmservice-github-io-gg-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-50 p-4 text-white">
+        <div class="container mx-auto text-center">
+            &copy; 2023 GANES GSM
+        </div>
+    </footer>
+    
+
+    <!-- Header -->
+    <script>
+        // Ambil elemen tombol burger dan daftar menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        // Tambahkan event listener untuk tombol burger
+        menuToggle.addEventListener('click', () => {
+            // Toggle kelas 'active' pada daftar menu
+            menu.classList.toggle('active');
+        });
+    </script>
+
+    <!-- Tambahkan script JavaScript AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Inisialisasi AOS
+        AOS.init();
+    </script>
+    
+</body>
+</html>
+
