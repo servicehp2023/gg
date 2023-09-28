@@ -27,7 +27,7 @@
             /* Sesuaikan dengan tinggi header */
             left: 0;
             right: 0;
-            background: linear-gradient(to bottom, #8042f3, #9468e6);
+           
             color: #fff;
             flex-direction: column;
             text-align: center;
@@ -53,7 +53,7 @@
 
         /* body */
         .body-css {
-            background-color: #8042f3;
+            background-color: #236c96;
             color: #ffffff;
             font-family: 'Skranji', cursive;
         }
@@ -120,13 +120,35 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             border-radius: 10px;
         }
+       
 
         .kartu {
             background-color: rgba(17, 2, 85, 0.089);
         }
+
         .dashboard {
             background-color: rgba(17, 2, 85, 0.089);
         }
+
+        .custom-color-input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid white; /* Menambahkan border putih */
+    border-radius: 50%; /* Membuat input bulat */
+    width: 20px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: 20px; /* Sesuaikan tinggi sesuai kebutuhan */
+    background-color: #00ccaaf6; /* Warna default biru */
+    cursor: pointer; /* Mengubah kursor saat diarahkan ke input */
+}
+
+/* Menghilangkan tampilan default dari input warna */
+.custom-color-input::-webkit-color-swatch-wrapper {
+    display: none;
+}
+
+
+
+
     </style>
     <script type="text/javascript">
         window.$crisp = [];
@@ -191,13 +213,14 @@
                     <p class="text-lg mb-8">Service HP Berkualitas dari GANES GSM, Pelayanan Terbaik untuk Perangkat
                         Mobile Anda</p>
                     <div class="flex justify-center space-x-4">
-                        <a href="#" class="text-white hover:text-blue-200 transition duration-300 icon" >
+                        <a href="https://www.facebook.com/GANES.SERVICE.ONLINE"
+                            class="text-white hover:text-blue-200 transition duration-300 icon">
                             <i class="fab fa-facebook h-6 w-6"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-blue-200 transition duration-300 icon" >
+                        <a href="#" class="text-white hover:text-blue-200 transition duration-300 icon">
                             <i class="fab fa-twitter h-6 w-6"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-blue-200 transition duration-300 icon" >
+                        <a href="#" class="text-white hover:text-blue-200 transition duration-300 icon">
                             <i class="fab fa-instagram h-6 w-6"></i>
                         </a>
                     </div>
@@ -206,22 +229,33 @@
         </div>
     </section>
 
+   
+           
     <div class="container mx-auto p-4">
 
+    
         <!-- Layanan -->
         <section id="layanan" class="py-8 my-4" data-aos="fade-up">
             <div class="container mx-auto">
                 <h2 class="text-3xl font-semibold mb-4">Aktivasi Tools</h2>
                 <!-- Card Layanan -->
                 <div class="relative">
-                    <input
-                      type="text"
-                      id="searchInput"
-                      placeholder="Cari Tools..."
-                      class="pl-10 pr-4 py-2 text-gray-600 rounded-lg  "
-                      style="background-image: url('https://i.ibb.co/m5pqqCs/your-image.png'); background-size: 16px 16px; background-repeat: no-repeat; background-position: 8px center;"
-                    />
-                  </div><br>
+                    <input type="text" id="searchInput" placeholder="Cari Tools..."
+                        class="pl-10 pr-4 py-2 text-gray-600 rounded-lg icon "
+                        style="background-image: url('https://i.ibb.co/m5pqqCs/your-image.png'); background-size: 16px 16px; background-repeat: no-repeat; background-position: 8px center;" />
+                      
+                    
+                     
+                        
+                  
+                </div><br>
+                <div data-aos="fade-up">
+                <input type="color" id="warna-background" class="custom-color-input icon">
+                <button id="simpan" class="button-br px-2 py-1 rounded-b icon" > <i class="fas fa-save"></i></i></button>
+                <button id="batal" class="button-br px-2 py-1 rounded-b icon" > <i class="fas fa-trash"></i></button> 
+            </div>
+
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 
 
@@ -229,9 +263,9 @@
 
                     <!-- Kartu 1 -->
                     <div class=" p-4 kartu rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card1 text-center px-4 py-5" >Dft
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card1 text-center px-4 py-5">Dft
                             Tool</h1>
-                        <div class="mb-2  ">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu1" value="1" class="form-radio"> 1 tahun - Rp. 900.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
@@ -244,25 +278,25 @@
 
                     <!-- Kartu 2 -->
                     <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card2 text-center px-4 py-5" >
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card2 text-center px-4 py-5">
                             Chimera Tool</h1>
-                        <div class="mb-2 text-gray-600">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
-                                    name="waktu2" value="1" class="form-radio"> 1 bulan - Rp. 100.000</label>
+                                    name="waktu2" value="1" class="form-radio"> Samsung Only - Rp. 1.150,000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
-                                    name="waktu2" value="2" class="form-radio"> 2 bulan - Rp. 200.000</label>
+                                    name="waktu2" value="2" class="form-radio"> Pro - Rp. 1.900,000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
-                                    name="waktu2" value="3" class="form-radio"> 3 bulan - Rp. 300.000</label>
+                                    name="waktu2" value="3" class="form-radio"> credit (min 30 crd) - Rp. 2.000</label>
                         </div>
                         <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar2"><i
                                 class="fas fa-shopping-cart"></i> Beli</button>
                     </div>
 
-                    <!-- Kartu 3 -->
-                    <div class="kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card3 text-center px-4 py-5" >
+                    <!-- Kartu 3
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card3 text-center px-4 py-5">
                             Chimera Pro Tool</h1>
-                        <div class="mb-2 text-gray-600">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu3" value="1" class="form-radio"> 1 bulan - Rp. 700.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
@@ -272,13 +306,13 @@
                         </div>
                         <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar3"><i
                                 class="fas fa-shopping-cart"></i> Beli</button>
-                    </div>
+                    </div> -->
 
                     <!-- Kartu 4 (Emi Tool) -->
-                    <div class="kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card4 text-center px-4 py-5" >Emi
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card4 text-center px-4 py-5">Emi
                             Tool</h1>
-                        <div class="mb-2 text-gray-600">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu4" value="1" class="form-radio"> 1 bulan - Rp. 100.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
@@ -292,10 +326,10 @@
 
 
                     <!-- Kartu 5 (Pandora Tool) -->
-                    <div class="kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card5 text-center px-4 py-5" >
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card5 text-center px-4 py-5">
                             Pandora Tool</h1>
-                        <div class="mb-2 text-gray-600">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu5" value="1" class="form-radio"> 1 tahun - Rp. 1.125,000</label>
 
@@ -305,10 +339,10 @@
                     </div>
 
                     <!-- Kartu 6 (Cf Tools) -->
-                    <div class="kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card6 text-center px-4 py-5" >Cf
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card6 text-center px-4 py-5">Cf
                             Tools</h1>
-                        <div class="mb-2 text-gray-600">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu6" value="1" class="form-radio"> 1 bulan - Rp. 100.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
@@ -323,10 +357,10 @@
                     </div>
 
                     <!-- Kartu 7 (Hydra Tool) -->
-                    <div class="kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card7 text-center px-4 py-5" >Hydra
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card7 text-center px-4 py-5">Hydra
                             Tool</h1>
-                        <div class="mb-2 text-gray-600">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu7" value="1" class="form-radio"> 1 bulan - Rp. 100.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
@@ -339,10 +373,10 @@
                     </div>
 
                     <!-- Kartu 8 (Eft Tool) -->
-                    <div class="kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card8 text-center px-4 py-5" >Eft
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card8 text-center px-4 py-5">Eft
                             Pro for Donggle</h1>
-                        <div class="mb-2 text-gray-600">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu8" value="1" class="form-radio"> 1 tahun - Rp. 350.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
@@ -353,10 +387,10 @@
                     </div>
 
                     <!-- Kartu9 (Eft Tool) -->
-                    <div class="kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card9 text-center px-4 py-5" >Eft
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card9 text-center px-4 py-5">Eft
                             Pro tanpa Donggle</h1>
-                        <div class="mb-2 text-gray-600">
+                        <div class="mb-2">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu9" value="1" class="form-radio"> 1 tahun new activation - Rp.
                                 1.300,000</label>
@@ -366,6 +400,153 @@
                         <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar9"><i
                                 class="fas fa-shopping-cart"></i> Beli</button>
                     </div>
+
+                    <!-- Kartu 10 -->
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card10 text-center px-4 py-5">
+                            Unclock Tool</h1>
+                        <div class="mb-2">
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu10" value="1" class="form-radio"> 3 bulan - Rp. 290.000</label>
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu10" value="2" class="form-radio"> 6 bulan - Rp. 410.000</label>
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu10" value="3" class="form-radio"> 1 tahun - Rp. 675.000</label>
+                        </div>
+                        <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar10"><i
+                                class="fas fa-shopping-cart"></i> Beli</button>
+                    </div>
+
+                    <!-- Kartu 11 -->
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card11 text-center px-4 py-5">
+                            Tfm Tool</h1>
+                        <div class="mb-2">
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu11" value="1" class="form-radio"> 6 bulan - Rp. 290.000</label>
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu11" value="2" class="form-radio"> 1 tahun - Rp. 390.000</label>
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu11" value="3" class="form-radio"> 2 tahun - Rp. 625.000</label>
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu11" value="4" class="form-radio"> credit - Rp. 15.000</label>
+                        </div>
+                        <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar11"><i
+                                class="fas fa-shopping-cart"></i> Beli</button>
+                    </div>
+
+
+                    <!-- Kartu 12 -->
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card12 text-center px-4 py-5">
+                            Cheetah Tool</h1>
+                        <div class="mb-2">
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu12" value="1" class="form-radio"> Lg Module - Rp. 250.000</label>
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu12" value="2" class="form-radio"> Pro Module 1 tahun - Rp.
+                                800.000</label>
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu12" value="3" class="form-radio"> credit - Rp. 15.000</label>
+                        </div>
+                        <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar12"><i
+                                class="fas fa-shopping-cart"></i> Beli</button>
+                    </div>
+
+                    
+                    <!-- Kartu 13 -->
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card13 text-center px-4 py-5">
+                            Tr Tool</h1>
+                        <div class="mb-2">
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu13" value="1" class="form-radio"> 1 tahun - Rp. 750.000</label>
+                           
+                        </div>
+                        <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar13"><i
+                                class="fas fa-shopping-cart"></i> Beli</button>
+                    </div>
+
+
+                    <!-- Kartu 14 -->
+                    <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card14 text-center px-4 py-5">
+                            T Tool Pro</h1>
+                        <div class="mb-2">
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu14" value="1" class="form-radio"> New Activation 1 tahun - Rp. 925.000</label>
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu14" value="2" class="form-radio"> Rennew 1 tahun - Rp.
+                                500.000</label>
+                            
+                        </div>
+                        <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar14"><i
+                                class="fas fa-shopping-cart"></i> Beli</button>
+                    </div>
+
+
+ <!-- Kartu 15 -->
+ <div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+    <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card15 text-center px-4 py-5">
+        Dt Pro Tool</h1>
+    <div class="mb-2">
+        <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                name="waktu15" value="1" class="form-radio"> New Activation - Rp. 550.000</label>
+       
+    </div>
+    <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar15"><i
+            class="fas fa-shopping-cart"></i> Beli</button>
+</div>
+ 
+<!-- Kartu 16 -->
+<div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+    <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card16 text-center px-4 py-5">
+        Borneo Scematic</h1>
+        <p class="text-center font-semibold mb-3  py-2">indonesia user</p>
+    <div class="mb-2">
+        <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                name="waktu16" value="1" class="form-radio"> 1 User 12 bulan - Rp. 550.000</label>
+        <label class="block mb-3 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                name="waktu16" value="2" class="form-radio"> Perpanjangan - Rp.
+            475.000</label>
+        <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                name="waktu16" value="3" class="form-radio"> 1 User 6 bulan - Rp. 325.000</label>
+                <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                    name="waktu16" value="4" class="form-radio"> 1 User 3 bulan - Rp. 190.000</label>
+                    <label class="block mb-3 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                        name="waktu16" value="5" class="form-radio"> Perpanjangan - Rp.
+                    600.000</label>
+                    <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                        name="waktu16" value="6" class="form-radio"> 2 User 6 bulan - Rp.
+                    550.000</label>
+    </div>
+    <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar16"><i
+            class="fas fa-shopping-cart"></i> Beli</button>
+</div>
+
+
+<!-- Kartu 17 -->
+<div class=" kartu p-4 rounded-lg shadow-md text-dark" data-aos="fade-up">
+    <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card17 text-center px-4 py-5">
+        Borneo Scematic</h1>
+        <p class="text-center font-semibold mb-3  py-2"> world wide</p>
+    <div class="mb-2">
+        <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                name="waktu17" value="1" class="form-radio"> 1 User 12 month - 38$</label>
+        <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                name="waktu17" value="2" class="form-radio"> Rennew 1 year - 35$</label>
+        <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                name="waktu17" value="3" class="form-radio"> 1 User 6 month - 23$</label>
+                <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                    name="waktu17" value="4" class="form-radio"> 1 User 3 month - 15$</label>
+                    <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                        name="waktu17" value="5" class="form-radio"> 2 User Rennew 1 year - 45$</label>
+                    
+    </div>
+    <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar17"><i
+            class="fas fa-shopping-cart"></i> Beli</button>
+</div>
+
 
 
 
@@ -377,10 +558,14 @@
 
                             if (radioValue) {
                                 message =
-                                    `Halo, saya ingin aktivasi ${judulCard} selama ${radioValue.nextSibling.nodeValue.trim()}.`;
+                                    `Halo, saya ingin aktivasi ${judulCard} ${radioValue.nextSibling.nodeValue.trim()}.`;
 
                                 if (typeof $crisp !== "undefined") {
                                     $crisp.push(['do', 'message:send', ['text', message]]);
+
+                                    // Memutar suara
+                                    const pesanTerkirimSound = document.getElementById('pesanTerkirimSound');
+                                    pesanTerkirimSound.play();
 
                                     // Menampilkan pesan berhasil terkirim dengan SweetAlert2
                                     Swal.fire({
@@ -449,6 +634,51 @@
                                 sendMessage(9); // Untuk kartu kedelapan
                             });
 
+                            document.getElementById("bayar10").addEventListener("click", function () {
+                                sendMessage(10); // Untuk kartu kedelapan
+                            });
+
+                            document.getElementById("bayar11").addEventListener("click", function () {
+                                sendMessage(11); // Untuk kartu kedelapan
+                            });
+
+                            document.getElementById("bayar12").addEventListener("click", function () {
+                                sendMessage(12); // Untuk kartu kedelapan
+                            });
+
+                            document.getElementById("bayar13").addEventListener("click", function () {
+                                sendMessage(13);
+                            });
+
+                            document.getElementById("bayar14").addEventListener("click", function () {
+                                sendMessage(14);
+                            });
+
+                            document.getElementById("bayar15").addEventListener("click", function () {
+                                sendMessage(15);
+                            });
+
+                            document.getElementById("bayar16").addEventListener("click", function () {
+                                sendMessage(16);
+                            });
+
+                            document.getElementById("bayar17").addEventListener("click", function () {
+                                sendMessage(17);
+                            });
+
+                            document.getElementById("bayar18").addEventListener("click", function () {
+                                sendMessage(18);
+                            });
+
+                            document.getElementById("bayar19").addEventListener("click", function () {
+                                sendMessage(19);
+                            });
+
+                            document.getElementById("bayar20").addEventListener("click", function () {
+                                sendMessage(20);
+                            });
+
+
                             // Anda dapat menambahkan lebih banyak event listener untuk kartu-kartu berikutnya di sini
                         });
                     </script>
@@ -461,6 +691,9 @@
             </div>
         </section>
 
+        <audio id="pesanTerkirimSound" preload="auto">
+            <source src="assets/sound/success.mp3" type="audio/mpeg">
+        </audio>
 
 
 
@@ -481,35 +714,43 @@
                                 Dashboard</h1>
                             <div class="mt-4">
                                 <button id="showDivButton1"
-                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full" data-aos="fade-up">
+                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full"
+                                    data-aos="fade-up">
                                     IREMOVAL PRO
                                 </button>
                                 <button id="showDivButton2"
-                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full" data-aos="fade-up">
+                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full"
+                                    data-aos="fade-up">
                                     IREMOVE TOOL
                                 </button>
                                 <button id="showDivButton3"
-                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full" data-aos="fade-up">
+                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full"
+                                    data-aos="fade-up">
                                     VR ACTIVATOR
                                 </button>
                                 <button id="showDivButton4"
-                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full" data-aos="fade-up">
+                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full"
+                                    data-aos="fade-up">
                                     SMD RAMDISK
                                 </button>
                                 <button id="showDivButton5"
-                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full" data-aos="fade-up">
+                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full"
+                                    data-aos="fade-up">
                                     MINA TOOL
                                 </button>
                                 <button id="showDivButton6"
-                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full" data-aos="fade-up">
+                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full"
+                                    data-aos="fade-up">
                                     FRPFILE
                                 </button>
                                 <button id="showDivButton7"
-                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full" data-aos="fade-up">
+                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full"
+                                    data-aos="fade-up">
                                     GARUDA
                                 </button>
                                 <button id="showDivButton8"
-                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full" data-aos="fade-up">
+                                    class="btn dashboard icon text-white  py-2 px-4 rounded mb-2 w-full"
+                                    data-aos="fade-up">
                                     IKEY PRO
                                 </button>
                             </div>
@@ -518,7 +759,8 @@
 
                     <!-- Main Content -->
                     <div class="col-span-1 lg:col-span-2" data-aos="fade-up">
-                        <div id="div1" class="dashboard text-white rounded-lg overflow-hidden shadow-lg p-4 card-content">
+                        <div id="div1"
+                            class="dashboard text-white rounded-lg overflow-hidden shadow-lg p-4 card-content">
 
                             <h1 class="text-2xl font-bold">iRemoval Pro</h2>
                                 <p class="text-lg">register SN iphone hello ios 15/16</h3>
@@ -564,12 +806,12 @@
                                         ORDER WAJIB
                                         CEK SUPPORT DI TOOL NYA</p>
                                     <p><a href="https://wa.me/628992184324" target="_blank"
-                                            class=" hover:text-blue-500"><i
-                                                class="fas fa-phone text-green-500"></i>
+                                            class=" hover:text-blue-500"><i class="fas fa-phone text-green-500"></i>
                                             whatsapp admin +628992184324</a></p>
 
                         </div>
-                        <div id="div2"class="dashboard text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
+                        <div id="div2"
+                            class="dashboard text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
                             <h1 class="text-2xl font-bold">iRemovE</h1>
                             <p class="text-lg">register SN iPhone hello iOS 12—16</p>
                             <p>bypass with network (bisa sim)</p>
@@ -611,8 +853,7 @@
                             <p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500"></i> SEBELUM ORDER
                                 WAJIB
                                 CEK SUPPORT DI TOOL NYA</p>
-                            <p><a href="https://wa.me/628992184324" target="_blank"
-                                    class=" hover:text-blue-500"><i
+                            <p><a href="https://wa.me/628992184324" target="_blank" class=" hover:text-blue-500"><i
                                         class="fas fa-phone text-green-500"></i>
                                     whatsapp admin +628992184324</a></p>
                         </div>
@@ -651,8 +892,7 @@
                             <p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500"></i> SEBELUM ORDER
                                 WAJIB
                                 CEK SUPPORT DI TOOL NYA</p>
-                            <p><a href="https://wa.me/628992184324" target="_blank"
-                                    class=" hover:text-blue-500"><i
+                            <p><a href="https://wa.me/628992184324" target="_blank" class=" hover:text-blue-500"><i
                                         class="fas fa-phone text-green-500"></i>
                                     whatsapp admin +628992184324</a></p>
                         </div>
@@ -841,7 +1081,7 @@
                                 // Kembali sembunyikan nomor rekening dan ganti ikon mata
                                 number.classList.add('hidden');
                                 button.innerHTML =
-                                '<i class="fas fa-eye"></i>'; // Mengganti dengan ikon mata tertutup
+                                    '<i class="fas fa-eye"></i>'; // Mengganti dengan ikon mata tertutup
                             }).catch((error) => {
                                 console.error('Gagal menyalin ke clipboard: ', error);
                             });
@@ -895,26 +1135,26 @@
             &copy; 2023 GANES GSM
         </div>
     </footer>
-        <!-- Footer -->
+    <!-- Footer -->
     <script>
         const searchInput = document.getElementById('searchInput');
         const kartu = document.querySelectorAll('.kartu');
-      
+
         searchInput.addEventListener('input', function () {
-          const searchTerm = searchInput.value.toLowerCase();
-      
-          kartu.forEach((kartu) => {
-            // Mengambil semua teks dalam kartu (termasuk radio button dan label)
-            const semuaTeks = kartu.textContent.toLowerCase();
-      
-            if (semuaTeks.includes(searchTerm)) {
-              kartu.style.display = 'block';
-            } else {
-              kartu.style.display = 'none';
-            }
-          });
+            const searchTerm = searchInput.value.toLowerCase();
+
+            kartu.forEach((kartu) => {
+                // Mengambil semua teks dalam kartu (termasuk radio button dan label)
+                const semuaTeks = kartu.textContent.toLowerCase();
+
+                if (semuaTeks.includes(searchTerm)) {
+                    kartu.style.display = 'block';
+                } else {
+                    kartu.style.display = 'none';
+                }
+            });
         });
-      </script>
+    </script>
 
     <!-- Header -->
     <script>
@@ -928,7 +1168,63 @@
             menu.classList.toggle('active');
         });
     </script>
+<script>
+    // Ambil elemen UI
+    const warnaBackgroundInput = document.getElementById('warna-background');
+    const simpanButton = document.getElementById('simpan');
+    const batalButton = document.getElementById('batal');
 
+    // Fungsi untuk mengubah warna latar belakang
+    function ubahWarnaBackground(warna) {
+        document.body.style.backgroundColor = warna;
+    }
+
+    // Periksa apakah warna latar belakang telah disimpan dalam penyimpanan lokal
+    const warnaBackgroundDisimpan = localStorage.getItem('warna-background');
+    if (warnaBackgroundDisimpan) {
+        ubahWarnaBackground(warnaBackgroundDisimpan);
+        warnaBackgroundInput.value = warnaBackgroundDisimpan;
+    }
+
+    // Event listener untuk input warna
+    warnaBackgroundInput.addEventListener('input', function () {
+        ubahWarnaBackground(warnaBackgroundInput.value);
+    });
+
+    // Event listener untuk tombol Simpan
+    simpanButton.addEventListener('click', function () {
+        const warnaTerpilih = warnaBackgroundInput.value;
+        localStorage.setItem('warna-background', warnaTerpilih);
+        Swal.fire({
+            icon: 'success',
+            title: 'Theme Saved',
+            text: 'Your theme has been saved.',
+        });
+    });
+
+    // Event listener untuk tombol Batal (untuk menghapus warna yang dipilih)
+    batalButton.addEventListener('click', function () {
+        Swal.fire({
+            icon: 'question',
+            title: 'Remove Theme',
+            text: 'Are you sure you want to remove the theme?',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, remove it',
+            cancelButtonText: 'No, keep it'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                localStorage.removeItem('warna-background');
+                warnaBackgroundInput.value = '';
+                ubahWarnaBackground('');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Theme Removed',
+                    text: 'The theme has been removed.',
+                });
+            }
+        });
+    });
+</script>
     <!-- Tambahkan script JavaScript AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
