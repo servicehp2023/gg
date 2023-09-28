@@ -51,13 +51,15 @@
             padding-bottom: 2rem;
         }
 
-        /* Ganti warna latar belakang gelap */
-        .dark {
+        /* body */
+        .body-css {
             background-color: #8042f3;
             color: #ffffff;
             font-family: 'Skranji', cursive;
         }
 
+
+        /* teks */
         h1 {
             font-family: 'Rampart One', cursive;
         }
@@ -85,25 +87,23 @@
 
         /* Misalnya, Anda ingin semua ikon dengan kelas "icon" membesar saat di-hover */
         .icon:hover {
-            transform: scale(1.1);
-            /* Ubah faktor skala sesuai dengan preferensi Anda */
-            transition: transform 0.2s ease;
-            /* Efek transisi agar perubahan terjadi lebih halus */
+            transform: scale(1.1);         
+            transition: transform 0.2s ease; 
         }
 
         .label-custom-bg {
-            background: linear-gradient(90deg, #723bf1, #ff1a4f);
-            color: #fff;
+           background-color: rgba(63, 77, 91, 0.702);
+            color: #ffffff;
 
         }
 
         .label-custom-bg:hover {
-            background: linear-gradient(90deg, #572cba, #ca133e);
+            background-color: rgba(63, 77, 91, 0.872);
         }
 
         .custom-judul-card {
-         
-            background: linear-gradient(90deg, #723bf1, #b237eb);
+
+            background-color: rgba(63, 77, 91, 0.923);
 
 
 
@@ -114,7 +114,7 @@
         }
 
         .button-bg {
-            background: linear-gradient(90deg, #844fff, #ff2b2b);
+            background: linear-gradient(90deg, #844fff, #c362ff);
             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.261);
         }
     </style>
@@ -124,36 +124,36 @@
 
 </head>
 
-<body class="dark">
+<body class="body-css">
     <!-- Header -->
     <header class="bg-purpel p-4 relative">
         <nav class="container mx-auto flex justify-between items-center">
             <h1 class="custom-heading text-white text-2xl font-semibold">GANES GSM</h1>
-                <!-- Tambahkan kelas 'lg:hidden' untuk menyembunyikan menu pada layar yang lebih kecil -->
-                <div class="lg:hidden">
-                    <!-- Tombol burger menu -->
-                    <button id="menu-toggle" class="text-white p-2 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                    <!-- Menu pada layar yang lebih kecil -->
-                    <ul id="menu" class="mobile icon">
-                        <li><a href="#beranda" class="text-white hover:underline">Beranda</a></li>
-                        <li><a href="#layanan" class="text-white hover:underline">Aktivasi Tools</a></li>
-                        <li><a href="#tentang-kami" class="text-white hover:underline">Tentang Kami</a></li>
-                        <li><a href="#kontak" class="text-white hover:underline">Kontak</a></li>
-                    </ul>
-                </div>
-                <!-- Tambahkan kelas 'lg:flex' untuk menampilkan menu pada layar yang lebih besar -->
-                <ul class="hidden lg:flex space-x-4">
-                    <li><a href="#beranda" class="text-white hover:underline ">Beranda</a></li>
+            <!-- Tambahkan kelas 'lg:hidden' untuk menyembunyikan menu pada layar yang lebih kecil -->
+            <div class="lg:hidden">
+                <!-- Tombol burger menu -->
+                <button id="menu-toggle" class="text-white p-2 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <!-- Menu pada layar yang lebih kecil -->
+                <ul id="menu" class="mobile icon">
+                    <li><a href="#beranda" class="text-white hover:underline">Beranda</a></li>
                     <li><a href="#layanan" class="text-white hover:underline">Aktivasi Tools</a></li>
-                    <li><a href="#tentang-kami" class="text-white hover:underline">Tentang Kami</a></li>
+                    <li><a href="#tentang-kami" class="text-white hover:underline">Order</a></li>
                     <li><a href="#kontak" class="text-white hover:underline">Kontak</a></li>
                 </ul>
+            </div>
+            <!-- Tambahkan kelas 'lg:flex' untuk menampilkan menu pada layar yang lebih besar -->
+            <ul class="hidden lg:flex space-x-4">
+                <li><a href="#beranda" class="text-white hover:underline ">Beranda</a></li>
+                <li><a href="#layanan" class="text-white hover:underline">Aktivasi Tools</a></li>
+                <li><a href="#tentang-kami" class="text-white hover:underline">Order</a></li>
+                <li><a href="#kontak" class="text-white hover:underline">Kontak</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -200,22 +200,22 @@
 
 
                     <!-- Kartu 1 -->
-                    <div class="bg-white p-4 rounded-lg shadow-md text-dark">
+                    <div class=" p-4 bg-gray-200 rounded-lg shadow-md text-dark">
                         <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card1 text-center px-4 py-5">Dft
                             Tool</h1>
-                        <div class="mb-2 text-center text-gray-600">
+                        <div class="mb-2  ">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu1" value="1" class="form-radio"> 1 tahun - Rp. 900.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu1" value="2" class="form-radio"> 12 jam - Rp. 100.000</label>
-                        
+
                         </div>
                         <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar1"><i
                                 class="fas fa-shopping-cart "></i> Order</button>
                     </div>
 
                     <!-- Kartu 2 -->
-                    <div class="bg-white p-4 rounded-lg shadow-md text-dark">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md text-dark">
                         <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card2 text-center px-4 py-5">
                             Chimera Tool</h1>
                         <div class="mb-2 text-gray-600">
@@ -231,7 +231,7 @@
                     </div>
 
                     <!-- Kartu 3 -->
-                    <div class="bg-white p-4 rounded-lg shadow-md text-dark">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md text-dark">
                         <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card3 text-center px-4 py-5">
                             Chimera Pro Tool</h1>
                         <div class="mb-2 text-gray-600">
@@ -247,7 +247,7 @@
                     </div>
 
                     <!-- Kartu 4 (Emi Tool) -->
-                    <div class="bg-white p-4 rounded-lg shadow-md text-dark">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md text-dark">
                         <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card4 text-center px-4 py-5">Emi
                             Tool</h1>
                         <div class="mb-2 text-gray-600">
@@ -264,20 +264,20 @@
 
 
                     <!-- Kartu 5 (Pandora Tool) -->
-                    <div class="bg-white p-4 rounded-lg shadow-md text-dark">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md text-dark">
                         <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card5 text-center px-4 py-5">
                             Pandora Tool</h1>
                         <div class="mb-2 text-gray-600">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu5" value="1" class="form-radio"> 1 tahun - Rp. 1.125,000</label>
-                         
+
                         </div>
                         <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar5"><i
                                 class="fas fa-shopping-cart"></i> Order</button>
                     </div>
 
                     <!-- Kartu 6 (Cf Tools) -->
-                    <div class="bg-white p-4 rounded-lg shadow-md text-dark">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md text-dark">
                         <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card6 text-center px-4 py-5">Cf
                             Tools</h1>
                         <div class="mb-2 text-gray-600">
@@ -287,15 +287,15 @@
                                     name="waktu6" value="2" class="form-radio"> 3 bulan - Rp. 170.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu6" value="3" class="form-radio"> 6 bulan - Rp. 225.000</label>
-                          <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
-                                        name="waktu6" value="4" class="form-radio"> 6 bulan - Rp. 225.000</label>        
+                            <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
+                                    name="waktu6" value="4" class="form-radio"> 6 bulan - Rp. 225.000</label>
                         </div>
                         <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar6"><i
                                 class="fas fa-shopping-cart"></i> Order</button>
                     </div>
 
                     <!-- Kartu 7 (Hydra Tool) -->
-                    <div class="bg-white p-4 rounded-lg shadow-md text-dark">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md text-dark">
                         <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card7 text-center px-4 py-5">Hydra
                             Tool</h1>
                         <div class="mb-2 text-gray-600">
@@ -311,26 +311,29 @@
                     </div>
 
                     <!-- Kartu 8 (Eft Tool) -->
-                    <div class="bg-white p-4 rounded-lg shadow-md text-dark">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card8 text-center px-4 py-5">Eft Pro for Donggle</h1>
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md text-dark">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card8 text-center px-4 py-5">Eft
+                            Pro for Donggle</h1>
                         <div class="mb-2 text-gray-600">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
                                     name="waktu8" value="1" class="form-radio"> 1 tahun - Rp. 350.000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
-                                    name="waktu8" value="2" class="form-radio"> 2 tahun - Rp. 500.000</label>                 
+                                    name="waktu8" value="2" class="form-radio"> 2 tahun - Rp. 500.000</label>
                         </div>
                         <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar8"><i
                                 class="fas fa-shopping-cart"></i> Order</button>
                     </div>
 
-                     <!-- Kartu9 (Eft Tool) -->
-                     <div class="bg-white p-4 rounded-lg shadow-md text-dark">
-                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card9 text-center px-4 py-5">Eft Pro tanpa Donggle</h1>
+                    <!-- Kartu9 (Eft Tool) -->
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md text-dark">
+                        <h1 class="text-xl font-semibold mb-3 custom-judul-card judul-card9 text-center px-4 py-5">Eft
+                            Pro tanpa Donggle</h1>
                         <div class="mb-2 text-gray-600">
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
-                                    name="waktu9" value="1" class="form-radio"> 1 tahun new activation - Rp. 1.300,000</label>
+                                    name="waktu9" value="1" class="form-radio"> 1 tahun new activation - Rp.
+                                1.300,000</label>
                             <label class="block mb-1 label-custom-bg px-4 py-2 rounded-lg mb-1"><input type="radio"
-                                    name="waktu9" value="2" class="form-radio"> 1 tahun  rennew - Rp. 650.000</label>                 
+                                    name="waktu9" value="2" class="form-radio"> 1 tahun rennew - Rp. 650.000</label>
                         </div>
                         <button class="button-bg px-4 py-2 rounded-b float-right icon" id="bayar9"><i
                                 class="fas fa-shopping-cart"></i> Order</button>
@@ -440,44 +443,54 @@
             <div class="container mx-auto">
                 <h2 class="text-3xl font-semibold mb-4">Order</h2>
 
-              
+
                 <div class="container mx-auto mt-10 grid grid-cols-1 lg:grid-cols-3 gap-4">
                     <!-- Sidebar -->
                     <div class="col-span-1 lg:col-span-1">
                         <div class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4">
-                            <h1 class="text-2xl bg-gray-600  px-4 py-2 rounded-lg mb-1font-semibold text-center">Dashboard</h1>
+                            <h1 class="text-2xl bg-gray-600  px-4 py-2 rounded-lg mb-1font-semibold text-center">
+                                Dashboard</h1>
                             <div class="mt-4">
-                                <button id="showDivButton1" class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
+                                <button id="showDivButton1"
+                                    class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
                                     IREMOVAL PRO
                                 </button>
-                                <button id="showDivButton2" class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
+                                <button id="showDivButton2"
+                                    class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
                                     IREMOVE TOOL
                                 </button>
-                                <button id="showDivButton3" class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
+                                <button id="showDivButton3"
+                                    class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
                                     VR ACTIVATOR
                                 </button>
-                                <button id="showDivButton4" class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
+                                <button id="showDivButton4"
+                                    class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
                                     SMD RAMDISK
                                 </button>
-                                <button id="showDivButton5" class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
+                                <button id="showDivButton5"
+                                    class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
                                     MINA TOOL
                                 </button>
-                                <button id="showDivButton6" class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
+                                <button id="showDivButton6"
+                                    class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
                                     FRPFILE
                                 </button>
-                                <button id="showDivButton7" class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
+                                <button id="showDivButton7"
+                                    class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
                                     GARUDA
                                 </button>
-                                <button id="showDivButton8" class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
+                                <button id="showDivButton8"
+                                    class="btn bg-gray-800 hover:bg-gray-900 text-white  py-2 px-4 rounded mb-2 w-full">
                                     IKEY PRO
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Main Content -->
                     <div class="col-span-1 lg:col-span-2">
-                        <div id="div1" class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content">
+                        <div id="div1"
+                            class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content">
 
                             <h1 class="text-2xl font-bold">iRemoval Pro</h2>
                                 <p class="text-lg">register SN iphone hello ios 15/16</h3>
@@ -485,9 +498,11 @@
                                 <table class="min-w-full mt-4">
                                     <thead>
                                         <tr>
-                                            <th class="text-left border border-white p-2 text-center  text-white">WINDOWS TOOL
+                                            <th class="text-left border border-white p-2 text-center  text-white">
+                                                WINDOWS TOOL
                                             </th>
-                                            <th class="text-left border border-white p-4  text-center text-white">Harga</th>
+                                            <th class="text-left border border-white p-4  text-center text-white">Harga
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -508,71 +523,80 @@
                                             <td class="border border-white p-2">625.000</td>
                                         </tr>
                                         <tr>
-                                            <td class="border border-white p-2">ipad mini 4—air 2—5th gen—6th gen—7th gen—pro 2
+                                            <td class="border border-white p-2">ipad mini 4—air 2—5th gen—6th gen—7th
+                                                gen—pro 2
                                                 12.9—pro 1 9.7</td>
                                             <td class="border border-white p-2">290.000</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500"></i> SEBELUM ORDER WAJIB
+                                <p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500"></i> SEBELUM
+                                    ORDER WAJIB
                                     CEK SUPPORT DI TOOL NYA</p>
                                 <p><a href="https://wa.me/628992184324" target="_blank"
-                                        class="text-blue-500 hover:text-blue-700"><i class="fas fa-phone text-green-500"></i>
+                                        class="text-blue-500 hover:text-blue-700"><i
+                                            class="fas fa-phone text-green-500"></i>
                                         whatsapp admin +628992184324</a></p>
-                          
+
                         </div>
-                        <div id="div2" class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
+                        <div id="div2"
+                            class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
                             <h1 class="text-2xl font-bold">iRemovE</h1>
-<p class="text-lg">register SN iPhone hello iOS 12—16</p>
-<p>bypass with network (bisa sim)</p>
-<table class="min-w-full mt-4">
-    <thead>
-        <tr>
-            <th class="text-left border border-white p-2 text-center text-white">MACBOOK & WINDOWS</th>
-            <th class="text-left border border-white p-4 text-center text-white">Harga</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="border border-white p-2">ip 5s</td>
-            <td class="border border-white p-2">100.000</td>
-        </tr>
-        <tr>
-            <td class="border border-white p-2">ip 6 & 6plus</td>
-            <td class="border border-white p-2">130.000</td>
-        </tr>
-        <tr>
-            <td class="border border-white p-2">ip 6s/6s plus / SE gen1</td>
-            <td class="border border-white p-2">175.000</td>
-        </tr>
-        <tr>
-            <td class="border border-white p-2">ip 7/7 plus</td>
-            <td class="border border-white p-2">320.000</td>
-        </tr>
-        <tr>
-            <td class="border border-white p-2">ip 8/8 plus</td>
-            <td class="border border-white p-2">450.000</td>
-        </tr>
-        <tr>
-            <td class="border border-white p-2">ip X</td>
-            <td class="border border-white p-2">600.000</td>
-        </tr>
-    </tbody>
-</table>
-<p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500"></i> SEBELUM ORDER WAJIB
-    CEK SUPPORT DI TOOL NYA</p>
-<p><a href="https://wa.me/628992184324" target="_blank"
-        class="text-blue-500 hover:text-blue-700"><i class="fas fa-phone text-green-500"></i>
-        whatsapp admin +628992184324</a></p>
+                            <p class="text-lg">register SN iPhone hello iOS 12—16</p>
+                            <p>bypass with network (bisa sim)</p>
+                            <table class="min-w-full mt-4">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left border border-white p-2 text-center text-white">MACBOOK &
+                                            WINDOWS</th>
+                                        <th class="text-left border border-white p-4 text-center text-white">Harga</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-white p-2">ip 5s</td>
+                                        <td class="border border-white p-2">100.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-white p-2">ip 6 & 6plus</td>
+                                        <td class="border border-white p-2">130.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-white p-2">ip 6s/6s plus / SE gen1</td>
+                                        <td class="border border-white p-2">175.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-white p-2">ip 7/7 plus</td>
+                                        <td class="border border-white p-2">320.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-white p-2">ip 8/8 plus</td>
+                                        <td class="border border-white p-2">450.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-white p-2">ip X</td>
+                                        <td class="border border-white p-2">600.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500"></i> SEBELUM ORDER
+                                WAJIB
+                                CEK SUPPORT DI TOOL NYA</p>
+                            <p><a href="https://wa.me/628992184324" target="_blank"
+                                    class="text-blue-500 hover:text-blue-700"><i
+                                        class="fas fa-phone text-green-500"></i>
+                                    whatsapp admin +628992184324</a></p>
                         </div>
-                        <div id="div3" class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
+                        <div id="div3"
+                            class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
                             <h1 class="text-2xl font-bold">VR—ACTIVATOR</h1>
                             <p class="text-lg">register SN iPhone & iPad hello iOS 12—16</p>
                             <p>bypass with network (bisa sim)</p>
                             <table class="min-w-full mt-4">
                                 <thead>
                                     <tr>
-                                        <th class="text-left border border-white p-2 text-center text-white">MAC TOOL</th>
+                                        <th class="text-left border border-white p-2 text-center text-white">MAC TOOL
+                                        </th>
                                         <th class="text-left border border-white p-4 text-center text-white">Harga</th>
                                     </tr>
                                 </thead>
@@ -595,65 +619,70 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500"></i> SEBELUM ORDER WAJIB
+                            <p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500"></i> SEBELUM ORDER
+                                WAJIB
                                 CEK SUPPORT DI TOOL NYA</p>
                             <p><a href="https://wa.me/628992184324" target="_blank"
-                                    class="text-blue-500 hover:text-blue-700"><i class="fas fa-phone text-green-500"></i>
+                                    class="text-blue-500 hover:text-blue-700"><i
+                                        class="fas fa-phone text-green-500"></i>
                                     whatsapp admin +628992184324</a></p>
                         </div>
-                        <div id="div4" class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
+                        <div id="div4"
+                            class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
                             <p>Maintenance</p>
                         </div>
-                        <div id="div5" class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
+                        <div id="div5"
+                            class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
                             <p>Maintenance</p>
                         </div>
-                        <div id="div6" class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
+                        <div id="div6"
+                            class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
                             <p>Maintenance</p>
                         </div>
-                        <div id="div7" class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
+                        <div id="div7"
+                            class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
                             <p>Maintenance</p>
                         </div>
-                        <div id="div8" class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
+                        <div id="div8"
+                            class="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg p-4 card-content hidden">
                             <p>Maintenance</p>
                         </div>
 
                     </div>
                 </div>
-            
-        <audio id="clickSound">
-            <source src="assets/sound/sound.mp3" type="audio/mpeg">
-        </audio>
-        
-        <script>
-            const buttons = document.querySelectorAll('.btn');
-            const divs = document.querySelectorAll('.card-content');
-            const clickSound = document.getElementById('clickSound'); // Dapatkan elemen audio
-            
-            buttons.forEach((button, index) => {
-                button.addEventListener('click', () => {
-                    // Memainkan suara ketika tombol ditekan
-                    clickSound.play();
-                    
-                    // Sembunyikan semua div terlebih dahulu
-                    divs.forEach((div) => {
-                        div.classList.add('hidden');
+
+                <audio id="clickSound">
+                    <source src="assets/sound/sound.mp3" type="audio/mpeg">
+                </audio>
+
+                <script>
+                    const buttons = document.querySelectorAll('.btn');
+                    const divs = document.querySelectorAll('.card-content');
+                    const clickSound = document.getElementById('clickSound'); // Dapatkan elemen audio
+
+                    buttons.forEach((button, index) => {
+                        button.addEventListener('click', () => {
+                            // Memainkan suara ketika tombol ditekan
+                            clickSound.play();
+
+                            // Sembunyikan semua div terlebih dahulu
+                            divs.forEach((div) => {
+                                div.classList.add('hidden');
+                            });
+
+                            // Tampilkan div yang sesuai dengan tombol yang ditekan
+                            divs[index].classList.remove('hidden');
+                        });
+
                     });
-                    
-                    // Tampilkan div yang sesuai dengan tombol yang ditekan
-                    divs[index].classList.remove('hidden');
-                });
-                
-            });
-        </script>
-        
-                
- 
-              
-
-                
-
-
+                </script>
         </section>
+
+
+
+
+
+
 
         <!-- Kontak -->
         <section id="kontak" class="py-8 my-4" data-aos="fade-up">
@@ -801,11 +830,9 @@
             showNumberAndCopy('dana-2-button', 'dana-2-number');
 
         </script>
-
-
-
-
     </div>
+
+
     <br><br><br>
     <div class="container mx-auto p-4" data-aos="fade-up">
 
@@ -851,15 +878,14 @@
             // Toggle kelas 'active' pada daftar menu
             menu.classList.toggle('active');
         });
-    </script>
+ </script>
 
-    <!-- Tambahkan script JavaScript AOS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        // Inisialisasi AOS
-        AOS.init();
-    </script>
-    <script type="text/javascript" src="https://client.crisp.chat/l.js"></script>
+                 <!-- Tambahkan script JavaScript AOS -->
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+                 <script>
+                   // Inisialisasi AOS
+                   AOS.init();
+                </script>
+                <script type="text/javascript" src="https://client.crisp.chat/l.js"></script>
 </body>
-
 </html>
