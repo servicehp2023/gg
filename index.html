@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Prism:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
     <style>
@@ -151,6 +152,9 @@
         .custom-color-input::-webkit-color-swatch-wrapper {
             display: none;
         }
+
+
+
     </style>
     <script type="text/javascript">
         window.$crisp = [];
@@ -169,9 +173,17 @@
 
 <body class="body-css">
     <!-- Header -->
-    <header class="bg-purpel p-4 relative">
-        <nav class="container mx-auto flex justify-between items-center">
-            <h1 class="custom-heading text-white text-2xl font-semibold">GANES GSM</h1>
+    <header class=" p-4 relative">
+        <nav class="container mx-auto flex justify-between items-center sticky-nav">
+            
+            <div class="flex items-center space-x-2">
+                <img src="assets/img/ganes-transformed.png" alt="Logo GANES GSM" class="h-8 w-8 animate__animated" id="logo"> <!-- Animasi logo -->
+                <h1 class="custom-heading text-white text-2xl font-semibold" id="text"> <!-- Teks tanpa animasi -->
+                    <span id="typed-text"></span> <!-- Teks yang akan dianimasikan -->
+                    <span id="cursor"></span> <!-- Kursor animasi -->
+                </h1>
+            </div>
+  
             <!-- Tambahkan kelas 'lg:hidden' untuk menyembunyikan menu pada layar yang lebih kecil -->
             <div class="lg:hidden">
                 <!-- Tombol burger menu -->
@@ -199,7 +211,59 @@
             </ul>
         </nav>
     </header>
-
+    
+          
+    <script>
+        // Fungsi untuk memulai animasi setiap 10 detik
+        function startAnimations() {
+            // Mengambil elemen logo
+            const logoElement = document.getElementById('logo');
+            
+            // Mengambil elemen teks
+            const textElement = document.getElementById('text');
+        
+            // Memulai animasi "animate__bounce" pada logo
+            logoElement.classList.add('animate__bounce');
+        
+            // Memulai animasi mengetik pada teks "GANES GSM"
+            const typedText = document.getElementById('typed-text');
+            const cursor = document.getElementById('cursor');
+            const textToType = 'GANES GSM'; // Teks yang akan dianimasikan
+            let currentIndex = 0;
+        
+            function typeText() {
+                if (currentIndex < textToType.length) {
+                    typedText.textContent += textToType[currentIndex];
+                    currentIndex++;
+                    setTimeout(typeText, 100); // Mengatur kecepatan animasi mengetik
+                } else {
+                    cursor.style.display = 'none'; // Sembunyikan kursor setelah selesai mengetik
+                }
+            }
+        
+            // Memulai animasi mengetik ketika halaman dimuat
+            typeText();
+        
+            // Menjalankan ulang animasi setelah 10 detik
+            setTimeout(() => {
+                logoElement.classList.remove('animate__bounce');
+                typedText.textContent = ''; // Menghapus teks yang telah dianimasikan
+                cursor.style.display = 'inline-block'; // Tampilkan kembali kursor
+                setTimeout(() => {
+                    logoElement.classList.add('animate__bounce');
+                    typeText(); // Memulai animasi mengetik lagi setelah 10 detik
+                }, 10);
+            }, 10000); // 10000 milidetik (10 detik)
+        }
+        
+        // Menjalankan fungsi pertama kali
+        startAnimations();
+        
+        // Menjalankan fungsi setiap 10 detik
+        setInterval(startAnimations, 10000); // 10000 milidetik (10 detik)
+        </script>
+        
+        
     <!-- Konten -->
 
     <!-- Jumbotron -->
