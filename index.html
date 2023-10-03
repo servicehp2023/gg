@@ -139,9 +139,9 @@ h2 {
             -webkit-appearance: none;
             border: 2px solid white;
             /* Menambahkan border putih */
-            border-radius: 50%;
+            border-radius: 100px;
             /* Membuat input bulat */
-            width: 20px;
+            width: 65px;
             /* Sesuaikan lebar sesuai kebutuhan */
             height: 20px;
             /* Sesuaikan tinggi sesuai kebutuhan */
@@ -294,36 +294,66 @@ h2 {
         </div>
     </section>
 
-    <div class=" p-8 m-2   rounded shadow-lg ">
-        <h2 class="text-4xl font-semibold mb-8 ">Terima jasa remote all device</h1>
-        <div class=" justify-between">
+    <div class=" p-8 m-2 rounded shadow-lg ">
+        <h2 class="text-4xl font-semibold mb-8">Terima jasa remote all device</h2>
+        <div class="justify-between mb-8">
             <a class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full text-sm font-semibold" id="showInput">Pertanyaan</a>
             <a href="#kontak" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full text-sm font-semibold">Transfer</a>
+            <a class="text-white py-2 px-4 rounded-full text-sm font-semibold" id="showTema" style="background-color: #be59f1; "
+   onmouseover="this.style.backgroundColor='#9933cc';" onmouseout="this.style.backgroundColor='#be59f1';">Tema</a>
+
         </div>
         <div id="inputContainer" class="hidden mt-4">
             <input type="text" id="messageInput" class="border text-gray-600 rounded px-2 py-1 w-full" placeholder="Masukkan pertanyaan">
             <button id="sendMessage" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full text-sm font-semibold mt-2">Kirim</button>
         </div>
-        <script>
-            const showInputButton = document.getElementById('showInput');
-            const inputContainer = document.getElementById('inputContainer');
-        
-            showInputButton.addEventListener('click', function() {
-                inputContainer.classList.remove('hidden');
-            });
-        
-            const sendMessageButton = document.getElementById('sendMessage');
-            sendMessageButton.addEventListener('click', function() {
-                const message = document.getElementById('messageInput').value;
-                const phoneNumber = '+628992184324'; // Ganti dengan nomor WhatsApp tujuan Anda
-                const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-        
-                // Buka tautan WhatsApp
-                window.open(whatsappURL, '_blank');
-            });
-        </script>
+        <div class=" hidden mt-4" data-aos="fade-up" id="tema">
+            <div class="d-flex align-items-center justify-content-center">
+                <div>
+                    <input type="color" id="warna-background" class="custom-color-input icon">
+                </div>
+                <button id="simpan" class="px-2 py-1 icon bg-green-500 hover:bg-green-600 text-white rounded"><i class="fas fa-save"></i></button>
+                <button id="batal" class="px-2 py-1 bg-red-500 hover:bg-red-600 rounded icon"><i class="fas fa-trash"></i></button>
+            </div>
+        </div>
     </div>
 
+    <script>
+        const showInputButton = document.getElementById('showInput');
+        const inputContainer = document.getElementById('inputContainer');
+        
+        showInputButton.addEventListener('click', function() {
+            inputContainer.classList.remove('hidden');
+            temaDiv.classList.add('hidden'); // Sembunyikan div "tema" saat menu lain diklik
+        });
+
+        const showTemaButton = document.getElementById('showTema');
+        const temaDiv = document.getElementById('tema');
+
+        showTemaButton.addEventListener('click', function() {
+            temaDiv.classList.remove('hidden'); // Tampilkan div "tema" saat menu "Tema" diklik
+            inputContainer.classList.add('hidden'); // Sembunyikan div "inputContainer" saat menu lain diklik
+        });
+
+        const sendMessageButton = document.getElementById('sendMessage');
+        const messageInput = document.getElementById('messageInput');
+
+        sendMessageButton.addEventListener('click', sendMessage);
+
+        function sendMessage() {
+            const message = messageInput.value;
+            const phoneNumber = '+628992184324'; // Ganti dengan nomor WhatsApp tujuan Anda
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+            
+            // Buka tautan WhatsApp
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+        
+        
+   
+   
+    
 <br><br>
     <div class="container mx-auto p-4">
 
@@ -340,12 +370,7 @@ h2 {
                 </div>
 
                 <br>
-                <div data-aos="fade-up">
-                    <input type="color" id="warna-background" class="custom-color-input icon">
-                    <button id="simpan" class="button-br px-2 py-1 rounded-b icon"> <i
-                            class="fas fa-save"></i></i></button>
-                    <button id="batal" class="button-br px-2 py-1 rounded-b icon"> <i class="fas fa-trash"></i></button>
-                </div>
+              
 
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
